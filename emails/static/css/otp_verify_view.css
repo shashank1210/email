@@ -1,0 +1,117 @@
+/* Resets padding, margin, and sets box-sizing to border-box for all elements, before and after pseudo-elements */
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Sets the background color of the body */
+body {
+    background-color: #080710;
+}
+
+/* Styles the .background class with specific width, height, and centers it */
+.background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* Styles elements with class .shape inside .background, making them circular and absolutely positioned */
+.background .shape {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* Styles the first .shape element with a blue linear gradient and positions it */
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    left: -120px;
+    top: -60px;
+}
+
+/* Styles the last .shape element with an orange linear gradient and positions it */
+.shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    right: -120px;
+    bottom: -40px;
+}
+
+/* Styles the form with specific dimensions, background, positioning, and visual effects */
+form {
+    height: 300px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 30px;
+}
+
+/* Applies a consistent font, color, and removes outline and border for all elements inside form */
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+/* Styles the h3 element inside form */
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+/* Styles label elements inside form */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styles input elements inside form */
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Styles placeholder text for input fields */
+::placeholder {
+    color: #e5e5e5;
+}
+
+/* Styles the button element */
+button {
+    margin-top: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
